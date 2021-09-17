@@ -49,7 +49,6 @@ fun HomeScreen() {
         modifier = Modifier.fillMaxSize(),
         scaffoldState = scaffoldState,
         sheetShape = RoundedCornerShape(topStart = radius, topEnd = radius),
-        topBar = { TopBar() },
         sheetContent = {
             Box(
                 modifier = Modifier
@@ -72,9 +71,4 @@ fun HomeScreen() {
     ) {
 
     }
-}
-
-@Composable
-fun TopBar() {
-
 }
