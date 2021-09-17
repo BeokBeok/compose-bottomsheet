@@ -78,37 +78,3 @@ fun HomeScreen() {
 fun TopBar() {
 
 }
-
-@Composable
-fun SheetExpanded(content: @Composable BoxScope.() -> Unit) {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colors.primary)
-    ) {
-        content()
-    }
-}
-
-@Composable
-fun SheetCollapsed(
-    isCollapsed: Boolean,
-    currentFraction: Float,
-    onSheetClick: () -> Unit,
-    content: @Composable RowScope.() -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(72.dp)
-            .background(MaterialTheme.colors.primary)
-            .graphicsLayer(alpha = 1f - currentFraction)
-            .noRippleClickable(
-                onClick = onSheetClick,
-                enabled = isCollapsed
-            ),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        content()
-    }
-}
