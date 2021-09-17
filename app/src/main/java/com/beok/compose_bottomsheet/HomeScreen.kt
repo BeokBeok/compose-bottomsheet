@@ -69,6 +69,6 @@ fun HomeScreen() {
         },
         sheetPeekHeight = 72.dp
     ) {
-
+        DebugScreen(scaffoldState = scaffoldState, onToggle = sheetToggle)
     }
 }
