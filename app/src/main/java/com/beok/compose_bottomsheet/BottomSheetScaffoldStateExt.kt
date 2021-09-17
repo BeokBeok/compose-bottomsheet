@@ -15,7 +15,7 @@ val BottomSheetScaffoldState.currentFraction: Float
             currentValue == BottomSheetValue.Collapsed &&
                 targetValue == BottomSheetValue.Collapsed -> 0f
             currentValue == BottomSheetValue.Expanded &&
-                targetValue == BottomSheetValue.Collapsed -> 1f
+                targetValue == BottomSheetValue.Expanded -> 1f
             currentValue == BottomSheetValue.Collapsed &&
                 targetValue == BottomSheetValue.Expanded -> fraction
             else -> 1f - fraction
